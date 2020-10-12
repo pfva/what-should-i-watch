@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "what-should-i-watch",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Curated list of movies, mostly in the sci-fi, thriller and mystery genres",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Petter Andersson",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },

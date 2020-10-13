@@ -57,6 +57,7 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint": "eslint --fix .",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",

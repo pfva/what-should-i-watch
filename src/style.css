@@ -240,6 +240,10 @@ a:focus {
 
 /* Custom classes */
 
+.gatsby-resp-image-wrapper {
+  width: 50%;
+}
+
 .global-wrapper {
   margin: var(--spacing-0) auto;
   max-width: var(--maxWidth-wrapper);

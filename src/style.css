@@ -57,12 +57,16 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
+  --color-background: #15212a;
   --color-primary: #005b99;
-  --color-text: #2e353f;
+  --color-text: #738a94;
   --color-text-light: #4f5969;
-  --color-heading: #1a202c;
+  --color-heading: #fff;
+  --color-heading-muted: #ddd;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --color-gradient-from: #e100ff;
+  --color-gradient-to: #7f00ff;
 }
 
 /* HTML elements */
@@ -83,6 +87,7 @@ html {
 body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
+  background-color: var(--color-background);
   color: var(--color-text);
 }
 
@@ -123,7 +128,7 @@ h6 {
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: var(--color-heading);
 }
 
 h2 {
@@ -264,6 +269,10 @@ a:focus {
 .main-heading {
   font-size: var(--fontSize-7);
   margin: 0;
+  background: -webkit-linear-gradient(290deg, var(--color-gradient-from), var(--color-gradient-to) 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .post-list-item {
@@ -277,7 +286,7 @@ a:focus {
 
 .post-list-item h2 {
   font-size: var(--fontSize-4);
-  color: var(--color-primary);
+  color: var(--color-heading-muted);
   margin-bottom: var(--spacing-2);
   margin-top: var(--spacing-0);
 }

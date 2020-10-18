@@ -2,6 +2,9 @@
 title: Tenet
 date: '2020-10-13'
 genre: 'Action, Sci-Fi'
+poster: 
+  src: './tenet.jpg'
+  alt: 'Poster for this movie'
 ---
 
 > Armed with only one word, Tenet, and fighting for the survival of the entire world,

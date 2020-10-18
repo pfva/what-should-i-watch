@@ -2,6 +2,9 @@
 title: Arrival
 date: '2020-10-15'
 genre: 'Drama, Mystery, Sci-Fi, Thriller'
+poster: 
+  src: './arrival.jpg'
+  alt: 'Poster for this movie'
 ---
 
 > A linguist works with the military to communicate with alien lifeforms 

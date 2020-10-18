@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -26,6 +27,7 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
+          const poster = post.frontmatter?.poster;
 
           return (
             <li key={post.fields.slug}>
@@ -42,15 +44,26 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                   <small>{post.frontmatter.date}</small>
                 </header>
+                {poster && (
+                  <Link to={post.fields.slug} itemProp="url">
+                    <Img
+                      fluid={poster.src.childImageSharp.fluid}
+                      alt={poster.alt}
+                      className="post-poster"
+                    />
+                  </Link>
+                )}
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.genre || post.excerpt,
                     }}
                     itemProp="genre"
+                    className="post-genre"
                   />
                 </section>
               </article>
+              <hr className="divider" />
             </li>
           );
         })}
@@ -78,6 +91,16 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           genre
+          poster {
+            src {
+              childImageSharp {
+                fluid(maxWidth: 1024) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
+          }
         }
       }
     }

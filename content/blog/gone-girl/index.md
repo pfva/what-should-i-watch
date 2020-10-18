@@ -2,6 +2,9 @@
 title: Gone Girl
 date: '2020-10-15'
 genre: 'Drama, Mystery, Thriller'
+poster: 
+  src: './gone-girl.jpg'
+  alt: 'Poster for this movie'
 ---
 
 > With his wife's disappearance having become the focus of an intense media circus, 

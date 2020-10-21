@@ -24,7 +24,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <ol style={{ listStyle: `none` }}>
+      <ol style={{ listStyle: `none` }} className="content-grid">
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug;
           const poster = post.frontmatter?.poster;
@@ -63,7 +63,6 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
               </article>
-              <hr className="divider" />
             </li>
           );
         })}
